@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenue sur le site officiel de Pronostics IA</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
         body {
-            background: url('{{ url_for('static', filename='fond-image.jpg') }}') no-repeat center center fixed;
+            background: url('fond-image.jpg') no-repeat center center fixed; /* Chemin vers l'image de fond */
             background-size: cover;
             margin: 0;
             font-family: 'Roboto', sans-serif;
@@ -75,12 +74,11 @@
 <body>
     <header>
         <h1>Bienvenue sur le site officiel de Pronostics IA</h1>
-        <img src="{{ url_for('static', filename='welcome-image.jpg') }}" alt="Bienvenue" class="welcome-image">
+        <img src="welcome-image.jpg" alt="Bienvenue" class="welcome-image"> <!-- Chemin vers l'image de bienvenue -->
         <div class="button-container">
-            <a href="{{ url_for('chatbots') }}" class="button">Aller au chatbot store</a>
+            <a href="chatbots.html" class="button">Aller au chatbot store</a> <!-- Chemin vers chatbots.html -->
         </div>
     </header>
     <button class="contact-button" onclick="window.location.href='mailto:billionsjonnhy@gmail.com'">✉</button>
 </body>
 </html>
-
