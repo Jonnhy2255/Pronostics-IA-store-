@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbots Store - Pronostics IA</title>
-    <link rel="stylesheet" href="static/style.css">
     <style>
-        /* Style général */
         body {
             background: url('fond-image.jpg') no-repeat center center fixed;
             background-size: cover;
@@ -203,7 +201,6 @@
             cards = cardContainer.getElementsByClassName("chatbot-card");
             var results = document.getElementById("searchResults");
 
-            // Clear previous results
             results.innerHTML = "";
 
             if (filter === "") {
@@ -215,7 +212,6 @@
             for (i = 0; i < cards.length; i++) {
                 title = cards[i].getElementsByTagName("h2")[0];
                 if (title.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    // Clone the card and append to results
                     var cardClone = cards[i].cloneNode(true);
                     results.appendChild(cardClone);
                     found = true;
@@ -271,27 +267,27 @@
                 </div>
             </div>
             <div class="chatbot-card" onclick="toggleDetails('details-v3')">
-                <img src="static/images/v3_image.jpg" alt="Chatbot V3">
+                <img src="v3_image.jpg" alt="Chatbot V3">
                 <h2>V3</h2>
                 <div id="details-v3" class="chatbot-details">
-                    <p>Chatbot V3 est conçu pour une performance à analyser jusqu'à deux matchs futurs et une interface utilisateur améliorée.</p>
-                    <a href="static/apk/Bot(V3).apk" class="download-button">Télécharger V3</a>
+                    <p>Chatbot V3 est conçu pour une performance à analyser jusqu'à deux matchs futurs.</p>
+                    <a href="Bot(V3).apk" class="download-button">Télécharger V3</a>
                 </div>
             </div>
             <div class="chatbot-card" onclick="toggleDetails('details-v7')">
-                <img src="static/images/v7_image.jpg" alt="Chatbot V7">
+                <img src="v7_image.jpg" alt="Chatbot V7">
                 <h2>V7</h2>
                 <div id="details-v7" class="chatbot-details">
-                    <p>Chatbot V7 propose une discussion avec l'IA et propose des analyses de 80% minimum de probabilité.</p>
-                    <a href="static/apk/Bot(V7).apk" class="download-button">Télécharger V7</a>
+                    <p>Chatbot V7 propose une discussion avec l'IA et des analyses de 80% minimum de probabilité.</p>
+                    <a href="Bot(V7).apk" class="download-button">Télécharger V7</a>
                 </div>
             </div>
             <div class="chatbot-card" onclick="toggleDetails('details-v7pro')">
-                <img src="static/images/v7pro_image.jpg" alt="Chatbot V7pro">
+                <img src="v7pro_image.jpg" alt="Chatbot V7pro">
                 <h2>V7pro</h2>
                 <div id="details-v7pro" class="chatbot-details">
-                    <p>Chatbot V7pro, la version professionnelle des outils d'analyse très puissants avec une multitude de données pour une analyse de très grande probabilité. Les messages par jour sont limités à 10.</p>
-                    <a href="static/apk/V7pro.apk" class="download-button">Télécharger V7pro</a>
+                    <p>Chatbot V7pro, version professionnelle des outils d'analyse très puissants.</p>
+                    <a href="V7pro.apk" class="download-button">Télécharger V7pro</a>
                 </div>
             </div>
         </div>
