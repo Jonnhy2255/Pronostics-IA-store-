@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de l'application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Détails de l'Application</h1>
+    </header>
+    <main>
+        <section class="app-detail">
+            <h2>Nom de l'Application</h2>
+            <img src="{{ url_for('static', filename='app_image.jpg') }}" alt="Image de l'application" class="app-image">
+            <p>Description de l'application. Cette section contient des informations détaillées sur les fonctionnalités et les avantages de l'application.</p>
+            <a href="{{ url_for('download') }}" class="button">Télécharger</a>
+        </section>
+    </main>
+</body>
+</html>
