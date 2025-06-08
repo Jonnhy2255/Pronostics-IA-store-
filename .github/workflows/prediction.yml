@@ -2,30 +2,30 @@ name: Prediction IA journalière
 
 on:
   schedule:
-    - cron: '0 1 * * *'  # Tous les jours à 01h UTC
-  workflow_dispatch:      # Lancement manuel possible
+    - cron: '0 1 * * *'
+  workflow_dispatch:
 
 jobs:
   prediction:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # ✅ Autorise les push
+      contents: write
 
     steps:
       - name: 📥 Récupération du dépôt
         uses: actions/checkout@v3
         with:
-          persist-credentials: true  # ✅ Nécessaire pour que le git push fonctionne
+          persist-credentials: true
 
       - name: 🐍 Configuration de Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: 🔧 Installation des dépendances
+      - name: 🔧 Installer les dépendances
         run: |
           python -m pip install --upgrade pip
           pip install beautifulsoup4 requests
 
-      - name: 📊 Exécution du script IA
+      - name: 📊 Lancer le script IA
         run: python pro14.py
